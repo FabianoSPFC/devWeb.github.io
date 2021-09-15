@@ -1,0 +1,258 @@
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100vh;
+  background: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  font-weight: 400;
+}
+
+
+.navbar {
+  padding: 10px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 40px;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: #e09537;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+} 
+
+#footer {
+    background: #277476ed;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    bottom: 81px;
+  }
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  #header {
+    background: #319396;
+    border-bottom: 1px solid #277476;
+    z-index: 997;
+    padding: 10px 0;
+ }
+
+ .text{
+    color: #000;
+  }
+
+  .container {
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    position: relative;
+    padding: 70px 30px;
+    left: 50px;
+    top: 5%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+
+  .content form .user-details{
+    position: absolute;
+    top: 16%;
+    left: 26%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 12px 12px 0px;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 10px);
+  }
+  form .input-box span.details{
+    font-weight: 500;
+  }
+  .user-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  form .user-details .input-box-complete{
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  
+  .user-details .input-box-complete input{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+   form .button{
+     height: 45px;
+     margin: -10px 0
+   }
+   form .button input{
+     position: absolute;
+     height: 8%;
+     width: 73%;
+     left: 26%;
+     top: 68%;
+     border-radius: 5px;
+     border: none;
+     color: #000;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background-color: #e09537 }
+   form .button input:hover{
+    border: 1px solid #277476;
+    background-color: #319396 ;
+    color: #fff;
+  }
+  
+  
+  .container .wrapperForm{
+    position: absolute;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapperForm.active{
+    border: none;
+  }
+  .wrapperForm .image{
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .wrapperForm img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+  }
+  .wrapperForm .icon{
+    font-size: 80px;
+    color: #e09537;
+  }
+  .wrapperForm .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #277476;
+  }
+  .wrapperForm #cancel-btn i{
+    position: absolute;
+    font-size: 200px;
+    right: 500px;
+    top: 15px;
+    color: #e09537;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapperForm.active:hover #cancel-btn i{
+    display: block;
+  }
+  .wrapperForm #cancel-btn i:hover{
+    color: red;
+  }
+  .container #btn-Choose-Image{
+    margin-top: 15px;
+    width: 300px;
+    height: 50px;
+    top: 100%;
+    position: absolute;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #319396 ;
+
+  }

@@ -25,7 +25,7 @@ body:before {
   left: 0;
   right: 0;
 }
-.container{
+.container {
   max-width: 700px;
   width: 100%;
   background-color: #fff;
