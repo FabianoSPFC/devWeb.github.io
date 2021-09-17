@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Registrar Aluno</title>
+  <title>Registrar Bebida</title>
 
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -17,11 +17,12 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="assets/css/registeredStudent.css" rel="stylesheet">
+  <link href="assets/css/addDrink.css" rel="stylesheet">
 
 </head>
 
 <body>
+
   <header id="header">
     <div class="navbar navbar-dark shadow-sm">
       <div class="container d-flex justify-content-between">
@@ -30,12 +31,10 @@
           Nome do Colégio
       </p>
       <ul>
-        <li><a class="nav-link scrollto" href="moduleOwner.html">Home</a></li>
-        <li><a class="nav-link scrollto" href="#home">Depósito</a></li>
-        <li><a class="nav-link scrollto" href="#advantageCS">Menu</a></li>
-        <li><a class="nav-link scrollto" href="consultBalanceOwner.html">Saldo</a></li>
-        <li><a class="nav-link scrollto" href="#goalCS">Histórico</a></li>
-        <li><a class="nav-link scrollto active" href="registeredStudent.html">Cadastrar Aluno</a></li>                
+          <li><a class="nav-link scrollto" href="moduleSchool.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="stockSchool.html">Estoque</a></li>
+          <li><a class="nav-link scrollto" href="consultBalanceSchool.html">Saldo dos Alunos</a></li>
+          <li><a class="nav-link scrollto" href="registeredOwner.html">Cadastrar Responsáveis</a></li>
         </ul>
         <div class="btn-group">
           <a class="btn navbar-brand text-right text" href="#">Nome do Funcionário</a>
@@ -50,16 +49,16 @@
     </div>
   </header>
 
-    <div class="wrapper">
-        <div class="container-fostrap" >
-                  <h1 class="heading">
-                    Cadastro dos Alunos
-                </h1>
-                <div class="container">
-                  <div class="wrapperForm">
-                    <div class="image">
-                      <img id="choose" src="Error.src" onerror="this.src='fallback-img.jpg'" />
-                    </div>
+  <section class="wrapper">
+    <div class="container-fostrap" >
+              <h1 class="heading">
+                Cadastro de Bebida
+            </h1>
+            <div class="container">
+              <div class="wrapperForm">
+                <div class="image">
+                  <img id="choose" src="Error.src" onerror="this.src='fallback-img.jpg'" />
+                </div>
                     <div class="content">
                       <div class="icon">
                         <img src="assets/img/upload.svg" alt="" />
@@ -70,49 +69,38 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <button onclick="defaultBtnActive()" id="btn-Choose-Image">
-                      Escolha a foto do aluno
+                      Escolha a foto da bebida
                     </button>
                     <input id="default-btn" type="file" hidden />
                   </div>
                   <div class="content">
                     <form action="#">
                       <div class="user-details">
-                        <div class="input-box">
-                          <input type="text" placeholder="Nome do Aluno" required />
+                        <div class="input-box-complete">
+                          <input type="text" placeholder="Nome da Bebida" required />
                         </div>
                         <div class="input-box">
-                          <input type="text" placeholder="Sobrenome do Aluno" required />
+                          <input type="number" placeholder="Código da Bebida" required />
                         </div>
                         <div class="input-box">
-                          <input type="number" placeholder="Matrícula" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="number" placeholder="Telefone"/>
-                        </div>
-                        <div class="input-box">
-                          <input type="text" placeholder="Turma" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="text" placeholder="Turno" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="text" placeholder="Login" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="password" placeholder="Senha" required />
+                          <input type="number" placeholder="Preço" required />
                         </div>
                         <div class="input-box-complete">
-                          <input type="email" placeholder="Email" />
+                          <input type="text" placeholder="Ingredientes" required />
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">Deixar vísivel</label>
                         </div>
                       </div>
                       <div class="button">
-                        <input type="submit" value="Cadastrar Aluno" />
+                        <input type="submit" value="Cadastrar Bebida" />
                       </div>
                     </form>
                   </div>        
                 </div>
         </div>
-    </div>
+    </section>
     
 
     <footer id="footer">

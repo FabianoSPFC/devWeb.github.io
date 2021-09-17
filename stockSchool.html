@@ -22,46 +22,43 @@
 </head>
 
 <body>
-    <header id="header" class="fixed-top d-flex align-items-cente">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-        <nav id="navbar" class="navbar navbar-dark  order-last order-lg-0">
-            <p class="navbar-brand" href="#">
-                <img src="assets/img/logoSchool.jpg" width="70" height="70" class="d-inline-block align-center rounded-circle" alt="">
-                Nome do Colégio
-            </p>
-            <ul>
-                <li><a class="nav-link scrollto active" href="#">Estoque</a></li>
-                <li><a class="nav-link scrollto" href="#goalCS">Saldo dos Alunos</a></li>
-                <li><a class="nav-link scrollto" href="registeredOwner.html">Cadastrar Responsáveis</a></li>
-              </ul>
-        </nav>
-        <div class="btn-group">
-            <a class="btn navbar-brand text-right text" href="#">Nome do Funcionário</a>
-            <button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="changeData.html">Alterar Dados</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="index.html">Sair</a>
+    <header id="header">
+        <div class="navbar navbar-dark shadow-sm">
+          <div class="container d-flex justify-content-between">
+            <p class="navbar-brand img-aling" href="#">
+              <img src="assets/img/logoSchool.jpg" width="70" height="70" class="d-inline-block align-center rounded-circle" alt="">
+              Nome do Colégio
+          </p>
+          <ul>
+              <li><a class="nav-link scrollto" href="moduleSchool.html">Home</a></li>
+              <li><a class="nav-link scrollto active" href="#">Estoque</a></li>
+              <li><a class="nav-link scrollto" href="consultBalanceSchool.html">Saldo dos Alunos</a></li>
+              <li><a class="nav-link scrollto" href="registeredOwner.html">Cadastrar Responsáveis</a></li>
+            </ul>
+            <div class="btn-group">
+              <a class="btn navbar-brand text-right text" href="#">Nome do Funcionário</a>
+              <button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="changeData.html">Alterar Dados</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.html">Sair</a>
+              </div>
             </div>
           </div>
-
-
-    </div>
-    </header>
+        </div>
+      </header>
 
     <div class="wrapper">
         <div class="container-fostrap">
-            <div>
-            </div>
-            <div class="content">
-                <h1 class="col-xs-12 heading">
+                <h1 class="heading">
                     Estoque da Cantina
+                    <a type="button" class="btn btn-success addFood" href="addFood.html">Adicionar Comida</a>
+                    <a type="button" class="btn btn-success addDrink" href="addDrink.html">Adicionar Bebida</a>
                 </h1>
-            </div>
             <div class="content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-3">
+                         <div class="col-xs-12 col-sm-3">
                             <div class="card">
                                 <a class="img-card">
                                 <img src="assets/img/estoque.jpg"/>
@@ -74,6 +71,9 @@
                                     <p class="">
                                         Saiba como está o estoque da sua cantina e não deixe faltar nenhum produto.
                                     </p>
+                                    <p class="">
+                                        Preço: R$ 12.00
+                                    </p>
                                 </div>
                                 <div class="card-read-more">
                                     <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-3">
+                        <!--<div class="col-xs-12 col-sm-3">
                             <div class="card">
                                 <a class="img-card">
                                 <img src="assets/img/contultarSaldoAluno.jpg" />
@@ -292,7 +292,7 @@
                                 </div>
                             </div>
                         </div>
-
+ -->
 
                     </div>
                 </div>
@@ -308,6 +308,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="assets/js/addStock.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 
