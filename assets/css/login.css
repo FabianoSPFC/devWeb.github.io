@@ -119,3 +119,8 @@ form {
   text-align: center;
   padding-top: 30px;
 }
+
+.img-aling{
+  position: relative;
+  margin-top: 18px;
+}

@@ -15,7 +15,7 @@ body {
 
 .navbar ul {
   margin: 0;
-  padding: 10px 0 10px 70px;
+  padding: 10px 0 10px 50px;
   display: flex;
   list-style: none;
   align-items: center;
@@ -156,4 +156,9 @@ h1.heading {
   position: relative;
   left: 30%;
   top: 6%;
+}
+
+.img-aling{
+  position: relative;
+  margin-top: 18px;
 }

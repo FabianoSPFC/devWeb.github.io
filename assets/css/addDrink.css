@@ -6,7 +6,6 @@ body {
   background-color: white;
 }
 
-
 .navbar {
   padding: 10px;
 }
@@ -38,6 +37,7 @@ body {
   color: #e09537;
 }
 
+
 .wrapper {
   position: relative;
   display: table;
@@ -53,6 +53,7 @@ body {
   text-align: center;
   /* vertical-align: middle; */
 }
+
 .fostrap-logo {
   width: 100px;
   margin-bottom:15px
@@ -171,7 +172,7 @@ h1.heading {
      height: 8%;
      width: 73%;
      left: 26%;
-     top: 72%;
+     top: 68%;
      border-radius: 5px;
      border: none;
      color: #000;
@@ -186,6 +187,7 @@ h1.heading {
     background-color: #319396 ;
     color: #fff;
   }
+  
   
   .container .wrapperForm{
     position: absolute;
@@ -253,6 +255,7 @@ h1.heading {
     text-transform: uppercase;
     cursor: pointer;
     background-color: #319396 ;
+
   }
 
   .img-aling{

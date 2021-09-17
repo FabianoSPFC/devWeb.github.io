@@ -1,11 +1,9 @@
 body {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  height: 100vh;
-  background: #FFF;
-  font-family: 'Open Sans', sans-serif;
   position: relative;
-  font-weight: 400;
+  height: 100vh;
+  max-width: 100vw;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
 }
 
 
@@ -15,7 +13,7 @@ body {
 
 .navbar ul {
   margin: 0;
-  padding: 0;
+  padding: 10px 0 10px 40px;
   display: flex;
   list-style: none;
   align-items: center;
@@ -29,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 50px;
+  padding: 10px 0 10px 30px;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
@@ -41,16 +39,19 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: table;
-  height: 100%;
-  width: 100%;
+  height: 79.7%;
+  width: 100%; 
 }
 
 .container-fostrap {
+  position: relative;
+  top: 50px;
   display: table-cell;
   padding: 1em;
   text-align: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 .fostrap-logo {
   width: 100px;
@@ -80,13 +81,14 @@ h1.heading {
 } 
 
 #footer {
-    background: #277476ed;
-    padding: 0 0 30px 0;
-    color: #fff;
-    font-size: 14px;
-    position: relative;
-    bottom: 81px;
-  }
+  background: #277476ed;
+  padding: 0 0 12px 0;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+  left:0;
+}
   #footer .copyright {
     text-align: center;
     padding-top: 30px;
@@ -95,23 +97,21 @@ h1.heading {
   #header {
     background: #319396;
     border-bottom: 1px solid #277476;
-    z-index: 997;
-    padding: 10px 0;
  }
 
  .text{
     color: #000;
   }
 
-  .container {
+  .container-fostrap .container {
     width: 100%;
-    height: 50%;
+    height: 62%;
     background-color: #fff;
     position: relative;
     padding: 70px 30px;
     left: 50px;
     top: 5%;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   }
 
@@ -187,7 +187,6 @@ h1.heading {
     color: #fff;
   }
   
-  
   .container .wrapperForm{
     position: absolute;
     display: flex;
@@ -254,5 +253,9 @@ h1.heading {
     text-transform: uppercase;
     cursor: pointer;
     background-color: #319396 ;
+  }
 
+  .img-aling{
+    position: relative;
+    margin-top: 18px;
   }

@@ -212,3 +212,8 @@ form .user-details .input-box-complete{
   left: 150px;
   bottom: 350px;
 }
+
+.img-aling{
+  position: relative;
+  margin-top: 18px;
+}

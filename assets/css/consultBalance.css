@@ -19,7 +19,7 @@ body {
 }
 
 .navbar li {
-  position: relative;  
+  position: relative;
 }
 
 .navbar a {
@@ -80,56 +80,6 @@ h1.heading {
     margin: 0 0 0.3em;
   }
 } 
-.card {
-  position: relative;
-  top: 50px;
-  display: block; 
-    margin-bottom: 20px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
-    transition: box-shadow .25s; 
-}
-.card:hover {
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.img-card {
-  width: 100%;
-  height:200px;
-  border-top-left-radius:2px;
-  border-top-right-radius:2px;
-  display:block;
-    overflow: hidden;
-}
-.img-card img{
-  width: 100%;
-  height: 200px;
-  object-fit:cover; 
-  transition: all .25s ease;
-} 
-.card-content {
-  padding:15px;
-  text-align:left;
-}
-.card-title {
-  margin-top:0px;
-  font-weight: 700;
-  font-size: 1.4em;
-}
-.card-title a {
-  color: #000;
-  text-decoration: none !important;
-}
-.card-read-more {
-  border-top: 1px solid #D4D4D4;
-}
-.card-read-more a {
-  text-decoration: none !important;
-  padding:10px;
-  font-weight:600;
-  text-transform: uppercase
-}
 
 #footer {
   background: #277476ed;
@@ -140,26 +90,38 @@ h1.heading {
   position: relative;
   left:0;
 }
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-}
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
 
-#header {
-  background: #319396;
-  border-bottom: 1px solid #277476;
-}
+  #header {
+    background: #319396;
+    border-bottom: 1px solid #277476;
+ }
 
  .text{
     color: #000;
   }
-  
-  .addStudent{
-    position: relative;
-    top: 0px;
-    left: 12%;
+    
+  .table{
+    border: 1px solid black;
   }
-  
+
+  .inputSearch{
+    width: 69%;
+    position: relative;
+    left: 15.5%;
+    border: 1px solid black;
+    border-radius: 8px ;
+    margin-bottom: 20px;
+  }
+
+  thead tr{
+    background-color: black;
+    color: white;
+  }
+
   .img-aling{
     position: relative;
     margin-top: 18px;
