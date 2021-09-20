@@ -1,6 +1,6 @@
 const product = document.querySelector(".row");
 
-function createProduct([img, category, tittle, description, price]){
+function createProduct([img, category, tittle, description, price, choose]){
     let code = `
     <div class="col-xs-12 col-sm-3 teste">
     <div class="card">
@@ -18,6 +18,8 @@ function createProduct([img, category, tittle, description, price]){
         <p class="">
         Preço: R$${price}
         </p>
+        <input id="toggle" class="toggle" type="checkbox">Habilitar Produto: 
+        <label for="toggle"></label>
     </div>
     <div class="card-read-more">
         <a href="#" class="btn btn-link btn-block">
@@ -34,7 +36,7 @@ let = a = ["https://assets.dmagstatic.com/wp-content/uploads/media/3151226/LaCom
            "Comida",
            "Salada",
            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-           "10,00"
+           "10,00",
           ]
 
 
