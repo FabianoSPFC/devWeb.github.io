@@ -1,13 +1,10 @@
 body {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  height: 100vh;
-  background: #FFF;
-  font-family: 'Open Sans', sans-serif;
   position: relative;
-  font-weight: 400;
+  height: 100vh;
+  max-width: 100vw;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
 }
-
 
 .navbar {
   padding: 10px;
@@ -15,7 +12,7 @@ body {
 
 .navbar ul {
   margin: 0;
-  padding: 10px 0 10px 50px;
+  padding: 10px 0 10px 40px;
   display: flex;
   list-style: none;
   align-items: center;
@@ -29,11 +26,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 70px;
+  padding: 10px 0 10px 30px;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 20px;
+}
+
+.dropdown-menu .dropdownText {
+  color: #e09537;
+  font-size: 15px;
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
@@ -41,26 +43,30 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: table;
-  height: 100%;
-  width: 100%;
+  height: 79.7%;
+  width: 100%;    
 }
 
 .container-fostrap {
-  display: table-cell;
+  position: relative;
   padding: 1em;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: middle;  
+  padding-bottom: 40px;
 }
+
 .fostrap-logo {
   width: 100px;
   margin-bottom:15px
 }
-h1.heading {
-  color: #fff;
+h1.heading {  
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
   font-size: 1.15em;
   font-weight: 900;
-  padding-bottom: 100px;
   color: #505050;
 }
 @media (min-width: 450px) {
@@ -80,6 +86,8 @@ h1.heading {
   }
 } 
 .card {
+  position: relative;
+  top: 50px;
   display: block; 
     margin-bottom: 20px;
     line-height: 1.42857143;
@@ -112,7 +120,7 @@ h1.heading {
 .card-title {
   margin-top:0px;
   font-weight: 700;
-  font-size: 1.65em;
+  font-size: 1.4em;
 }
 .card-title a {
   color: #000;
@@ -129,36 +137,40 @@ h1.heading {
 }
 
 #footer {
-    background: #277476ed;
-    padding: 0 0 30px 0;
-    color: #fff;
-    font-size: 14px;
-    position: relative;
-    bottom: 81px;
-  }
-  #footer .copyright {
-    text-align: center;
-    padding-top: 30px;
-  }
+  background: #277476ed;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+  left:0;
+}
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
 
-  #header {
-    background: #319396;
-    border-bottom: 1px solid #277476;
-    z-index: 997;
-    padding: 10px 0;
- }
+#header {
+  background: #319396;
+  border-bottom: 1px solid #277476;
+}
 
  .text{
     color: #000;
   }
+  
+  .addFood{
+    position: relative;
+    top: 0px;
+    left: 11%;
+  }
 
-.addStudent{
-  position: relative;
-  left: 30%;
-  top: 6%;
-}
-
-.img-aling{
-  position: relative;
-  margin-top: 18px;
-}
+  .addDrink{
+    position: relative;
+    left: 11%;
+  }
+  
+  .img-aling{
+    position: relative;
+    margin-top: 18px;
+  }

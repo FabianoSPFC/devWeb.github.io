@@ -33,6 +33,11 @@ body {
   font-size: 20px;
 }
 
+.dropdown-menu .dropdownText {
+  color: #e09537;
+  font-size: 15px;
+}
+
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
   color: #e09537;
 }

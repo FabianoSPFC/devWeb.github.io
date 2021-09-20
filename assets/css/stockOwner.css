@@ -19,7 +19,7 @@ body {
 }
 
 .navbar li {
-  position: relative;  
+  position: relative;
 }
 
 .navbar a {
@@ -159,13 +159,61 @@ h1.heading {
     color: #000;
   }
   
-  .addStudent{
+  .addFood{
     position: relative;
     top: 0px;
-    left: 12%;
+    left: 11%;
+  }
+
+  .addDrink{
+    position: relative;
+    left: 11%;
   }
   
   .img-aling{
     position: relative;
     margin-top: 18px;
+  }
+
+  .toggle{
+    display: none;
+  }
+
+  .toggle + label{
+    width: 36px;
+    height: 20px;
+    background-color: lightgrey;
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    padding: 2px;
+    transition: 200ms;
+    cursor: pointer;
+    left: 150px;
+    bottom: 20px;    
+  }
+
+  .toggle + label:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    right: unset;
+    left: 2px;
+    top: 1.2px;
+    transition: 200ms;
+  }
+
+  .toggle:checked + label{
+    background: #e09537;
+  }
+
+  .toggle:checked + label:before{
+    content: '';
+    left: calc(100% - 18px);
+    box-shadow: 0 4px 4px rgb(0, 0, 0 / 10%);
   }
