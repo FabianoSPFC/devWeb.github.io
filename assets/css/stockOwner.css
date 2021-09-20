@@ -217,3 +217,39 @@ h1.heading {
     left: calc(100% - 18px);
     box-shadow: 0 4px 4px rgb(0, 0, 0 / 10%);
   }
+
+  .table{
+    border: 1px solid black;
+  }
+
+  .inputSearch{
+    width: 69%;
+    position: relative;
+    left: 15.5%;
+    border: 1px solid black;
+    border-radius: 8px ;
+    margin-bottom: 20px;
+  }
+
+  thead tr{
+    background-color: black;
+    color: white;
+  }
+
+  .fa-utensils{
+    color: #e09537;
+    position: relative;
+    left: 0px;
+  }
+
+  .fa-money-check-alt{
+    color: blue;
+    position: relative;
+    left: 10px;
+  }
+
+  .fa-piggy-bank{
+    color: red;
+    position: relative;
+    left: 20px;
+  }
