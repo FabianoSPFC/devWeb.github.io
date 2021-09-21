@@ -87,7 +87,6 @@ h1.heading {
 } 
 .card {
   position: relative;
-  top: 50px;
   display: block; 
     margin-bottom: 20px;
     line-height: 1.42857143;
@@ -237,19 +236,19 @@ h1.heading {
   }
 
   .fa-utensils{
-    color: #e09537;
+    color: blue;
     position: relative;
     left: 0px;
   }
 
   .fa-money-check-alt{
-    color: blue;
+    color: grey;
     position: relative;
-    left: 10px;
+    left: 15px;
   }
 
   .fa-piggy-bank{
-    color: red;
+    color: green;
     position: relative;
-    left: 20px;
+    left: 30px;
   }
