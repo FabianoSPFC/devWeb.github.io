@@ -72,13 +72,13 @@ function submit(e) {
 	if (!/^\d+$/.test(id.value)) {
 		displayError(e, "Matrícula só deve conter números. ");
 	}
-	if (
-		!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
-			phone.value
-		)
-	) {
-		displayError(e, "Formato de telefone incorreto. ");
-	}
+	// if (
+	// 	!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
+	// 		phone.value
+	// 	)
+	// ) {
+	// 	displayError(e, "Formato de telefone incorreto. ");
+	// }
 	if (!/^[a-z 0-9-]+$/i.test(className.value)) {
 		displayError(
 			e,
