@@ -1,14 +1,13 @@
 const form = document.querySelector("form");
 const [
-	studentName,
-	studentSurname,
-	id,
-	phone,
-	className,
-	shift,
+	schoolName,
+	schoolPhone,
 	login,
 	password,
-	email,
+	employeeName,
+	employeeSurname,
+	schoolEMail,
+	schoolAdress,
 ] = document.querySelectorAll("form > div > div > input");
 const message = document.querySelector(".invalidPassword");
 
@@ -18,7 +17,6 @@ const message = document.querySelector(".invalidPassword");
  * @param {string} messageString
  */
 function displayError(e, messageString) {
-	console.log("aaa");
 	e.preventDefault();
 	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
@@ -33,29 +31,18 @@ function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;
 	if (
-		!/^[a-z ,.'-]+$/i.test(studentName.value) ||
-		!/^[a-z ,.'-]+$/i.test(studentSurname.value)
+		!/^[a-z ,.'-]+$/i.test(schoolName.value) ||
+		!/^[a-z ,.'-]+$/i.test(employeeName.value) ||
+		!/^[a-z ,.'-]+$/i.test(employeeSurname.value)
 	) {
 		displayError(e, "Nome deve conter apenas caracteres alfanuméricos.");
 	}
-	if (!/^\d+$/.test(id.value)) {
-		displayError(e, "Matrícula só deve conter números");
-	}
 	if (
 		!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
-			phone.value
+			schoolPhone.value
 		)
 	) {
 		displayError(e, "Formato de telefone incorreto");
-	}
-	if (!/^[a-z 0-9-]+$/i.test(className.value)) {
-		displayError(
-			e,
-			"Nome da turma só deve conter letras, números, hífens e espaços"
-		);
-	}
-	if (!/^(matutino)|(vespertino)|(noturno)$/i.test(shift.value)) {
-		displayError(e, "Turno deve ser matutino, vespertino, ou noturno");
 	}
 	if (!/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/.test(login.value)) {
 		displayError(
@@ -75,10 +62,16 @@ function submit(e) {
 	}
 	if (
 		!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-			email.value
+			schoolEMail.value
 		)
 	) {
 		displayError(e, "Email Inválido.");
+	}
+	if (!/^([\w\W,.ºª°]+)\s(\d+)$/.test(schoolAdress.value)) {
+		displayError(
+			e,
+			"Endereço deve conter apenas caracteres alfanuméricos, espaço e símbolos (,.ºª°)"
+		);
 	}
 }
 

@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="assets/css/registered.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrar Cantina CantiSystem</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link href="assets/img/favicon.ico" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-  </head>
-  <body>
-    <a href="index.html" class="back">Voltar</a>
-    <div class="container">
-      <div class="wrapper">
-        <div class="image">
-          <img id="choose" src="Error.src" onerror="this.src='fallback-img.jpg'" />
-        </div>
-        <div class="content">
-          <div class="icon">
-            <img src="assets/img/upload.svg" alt="" />
-          </div>
-          <div class="text">Nenhum arquivo foi escolhido</div>
-        </div>
-        <div id="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
-      <button onclick="defaultBtnActive()" id="btn-Choose-Image">
-        Escolha a imagem do colégio
-      </button>
-      <input id="default-btn" type="file" hidden />
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="assets/css/registered.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registrar Cantina CantiSystem</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link href="assets/img/favicon.ico" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<script defer src="./assets/js/validation/registerCanteen.js"></script>
+		<link rel="stylesheet" href="assets/css/validation.css" />
+	</head>
+	<body>
+		<a href="index.html" class="back">Voltar</a>
+		<div class="container">
+			<div class="wrapper">
+				<div class="image">
+					<img id="choose" />
+				</div>
+				<div class="content">
+					<div class="icon">
+						<img src="assets/img/upload.svg" alt="" />
+					</div>
+					<div class="text">Nenhum arquivo foi escolhido</div>
+				</div>
+				<div id="cancel-btn">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<button onclick="defaultBtnActive()" id="btn-Choose-Image">
+				Escolha a imagem do colégio
+			</button>
+			<input id="default-btn" type="file" hidden />
 
-      <div class="content">
-        <form action="#">
-          <div class="user-details">
-            <div class="input-box">
-              <input type="text" placeholder="Nome do Colégio" required />
-            </div>
-            <div class="input-box">
-              <input type="number" placeholder="Telefone do Colégio" required />
-            </div>
-            <div class="input-box">
-              <input type="text" placeholder="Login" required />
-            </div>
-            <div class="input-box">
-              <input type="password" placeholder="Senha" required />
-            </div>
-            <div class="input-box">
-              <input type="text" placeholder="Nome do Funcionário" required />
-            </div>
-            <div class="input-box">
-              <input type="text" placeholder="Sobrenome do Funcionário" required />
-            </div>
-            <div class="input-box-complete">
-              <input type="email" placeholder="Email do Colégio" required />
-            </div>
-            <div class="input-box-complete">
-              <input type="text" placeholder="Endereço do Colégio" required />
-            </div>
-          </div>
-          <div class="button">
-            <input type="submit" value="Cadastrar Colégio" />
-          </div>
-        </form>
-      </div>
-    </div>
-    <img src="assets/img/logoLogin.svg" alt="" class="logo">
+			<div class="content">
+				<form action="./login.html">
+					<div class="user-details">
+						<div class="input-box">
+							<input
+								type="text"
+								placeholder="Nome do Colégio"
+								required
+							/>
+						</div>
+						<div class="input-box">
+							<input
+								type="text"
+								placeholder="Telefone do Colégio"
+								required
+							/>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Login" required />
+						</div>
+						<div class="input-box">
+							<input
+								type="password"
+								placeholder="Senha"
+								required
+							/>
+						</div>
+						<div class="input-box">
+							<input
+								type="text"
+								placeholder="Nome do Funcionário"
+								required
+							/>
+						</div>
+						<div class="input-box">
+							<input
+								type="text"
+								placeholder="Sobrenome do Funcionário"
+								required
+							/>
+						</div>
+						<div class="input-box-complete">
+							<input
+								type="email"
+								placeholder="Email do Colégio"
+								required
+							/>
+						</div>
+						<div class="input-box-complete">
+							<input
+								type="text"
+								placeholder="Endereço do Colégio"
+								required
+							/>
+						</div>
+					</div>
+					<div class="button">
+						<input type="submit" value="Cadastrar Colégio" />
+					</div>
+				</form>
+				<span hidden class="invalidPassword"></span>
+			</div>
+		</div>
+		<img src="assets/img/logoLogin.svg" alt="" class="logo" />
 
-    <script src="assets/js/registered.js"></script>
-  </body>
+		<script src="assets/js/registered.js"></script>
+	</body>
 </html>

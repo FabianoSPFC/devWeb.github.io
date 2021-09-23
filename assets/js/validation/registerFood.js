@@ -1,5 +1,7 @@
 const form = document.querySelector("form");
-const [email, password] = document.querySelectorAll("form > div > input");
+const [foodName, foodCode, price, ingredients] = document.querySelectorAll(
+	"form > div > div > input"
+);
 const message = document.querySelector(".invalidPassword");
 
 /**
@@ -20,12 +22,14 @@ function displayError(e, messageString) {
 function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;
-	console.log(password.value.length)
-	if (password.value.length === 0) {
-		displayError(e, "Preencha a Senha");
-	}
-	if (email.value.length === 0) {
-		displayError(e, "Preencha o email");
+
+	if (
+		!/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/.test(foodName.value)
+	) {
+		displayError(
+			e,
+			"Nome da comida permite apenas caracteres alfanuméricos"
+		);
 	}
 }
 

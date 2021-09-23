@@ -1,116 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>Registrar Bebida</title>
 
-  <title>Registrar Bebida</title>
+		<link href="assets/img/favicon.ico" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
 
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+		<!-- Vendor CSS Files -->
+		<link
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+		<link href="assets/css/addDrink.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/validation.css" />
+		<script defer src="./assets/js/validation/registerDrink.js"></script>
+	</head>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="assets/css/addDrink.css" rel="stylesheet">
+	<body>
+		<header id="header">
+			<div class="navbar navbar-dark shadow-sm">
+				<div class="container d-flex justify-content-between">
+					<p class="navbar-brand img-aling" href="#">
+						<img
+							src="assets/img/logoSchool.jpg"
+							width="70"
+							height="70"
+							class="d-inline-block align-center rounded-circle"
+							alt=""
+						/>
+						Nome do Colégio
+					</p>
+					<ul>
+						<li>
+							<a
+								class="nav-link scrollto"
+								href="moduleSchool.html"
+								>Home</a
+							>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="stockSchool.html"
+								>Estoque</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link scrollto"
+								href="consultBalanceSchool.html"
+								>Saldo dos Alunos</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link scrollto"
+								href="registeredOwner.html"
+								>Cadastrar Responsáveis</a
+							>
+						</li>
+					</ul>
+					<div class="btn-group">
+						<a class="btn navbar-brand text-right text" href="#"
+							>Nome do Funcionário</a
+						>
+						<button
+							class="btn dropdown-toggle"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						></button>
+						<div class="dropdown-menu">
+							<a
+								class="dropdown-item dropdownText"
+								href="changeData.html"
+								>Alterar Dados</a
+							>
+							<div class="dropdown-divider"></div>
+							<a
+								class="dropdown-item dropdownText"
+								href="index.html"
+								>Sair</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-</head>
+		<section class="wrapper">
+			<div class="container-fostrap">
+				<h1 class="heading">Cadastro de Bebida</h1>
+				<div class="container">
+					<div class="wrapperForm">
+						<div class="image">
+							<img id="choose" />
+						</div>
+						<div class="content">
+							<div class="icon">
+								<img src="assets/img/upload.svg" alt="" />
+							</div>
+							<div class="text">Nenhum arquivo foi escolhido</div>
+						</div>
+						<div id="cancel-btn">
+							<i class="fas fa-times"></i>
+						</div>
+						<button
+							onclick="defaultBtnActive()"
+							id="btn-Choose-Image"
+						>
+							Escolha a foto da bebida
+						</button>
+						<input id="default-btn" type="file" hidden />
+					</div>
+					<div class="content">
+						<form action="#">
+							<div class="user-details">
+								<div class="input-box-complete">
+									<input
+										type="text"
+										placeholder="Nome da Bebida"
+										required
+									/>
+								</div>
+								<div class="input-box">
+									<input
+										type="number"
+										placeholder="Código da Bebida"
+										required
+									/>
+								</div>
+								<div class="input-box">
+									<input
+										type="number"
+										placeholder="Preço"
+										required
+										min="0"
+									/>
+								</div>
+								<div class="input-box-complete">
+									<input
+										type="text"
+										placeholder="Fornecedor"
+										required
+									/>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input
+										type="checkbox"
+										class="custom-control-input"
+										id="customCheck1"
+									/>
+									<label
+										class="custom-control-label"
+										for="customCheck1"
+										>Deixar vísivel</label
+									>
+								</div>
+							</div>
+							<div class="button">
+								<input type="submit" value="Cadastrar Bebida" />
+							</div>
+						</form>
+						<span hidden class="invalidPassword"></span>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<body>
-
-  <header id="header">
-    <div class="navbar navbar-dark shadow-sm">
-      <div class="container d-flex justify-content-between">
-        <p class="navbar-brand img-aling" href="#">
-          <img src="assets/img/logoSchool.jpg" width="70" height="70" class="d-inline-block align-center rounded-circle" alt="">
-          Nome do Colégio
-      </p>
-      <ul>
-          <li><a class="nav-link scrollto" href="moduleSchool.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="stockSchool.html">Estoque</a></li>
-          <li><a class="nav-link scrollto" href="consultBalanceSchool.html">Saldo dos Alunos</a></li>
-          <li><a class="nav-link scrollto" href="registeredOwner.html">Cadastrar Responsáveis</a></li>
-        </ul>
-        <div class="btn-group">
-          <a class="btn navbar-brand text-right text" href="#">Nome do Funcionário</a>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item dropdownText" href="changeData.html">Alterar Dados</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item dropdownText" href="index.html">Sair</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="wrapper">
-    <div class="container-fostrap" >
-              <h1 class="heading">
-                Cadastro de Bebida
-            </h1>
-            <div class="container">
-              <div class="wrapperForm">
-                <div class="image">
-                  <img id="choose" src="Error.src" onerror="this.src='fallback-img.jpg'" />
-                </div>
-                    <div class="content">
-                      <div class="icon">
-                        <img src="assets/img/upload.svg" alt="" />
-                      </div>
-                      <div class="text">Nenhum arquivo foi escolhido</div>
-                    </div>
-                    <div id="cancel-btn">
-                      <i class="fas fa-times"></i>
-                    </div>
-                    <button onclick="defaultBtnActive()" id="btn-Choose-Image">
-                      Escolha a foto da bebida
-                    </button>
-                    <input id="default-btn" type="file" hidden />
-                  </div>
-                  <div class="content">
-                    <form action="#">
-                      <div class="user-details">
-                        <div class="input-box-complete">
-                          <input type="text" placeholder="Nome da Bebida" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="number" placeholder="Código da Bebida" required />
-                        </div>
-                        <div class="input-box">
-                          <input type="number" placeholder="Preço" required />
-                        </div>
-                        <div class="input-box-complete">
-                          <input type="text" placeholder="Ingredientes" required />
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="customCheck1">
-                          <label class="custom-control-label" for="customCheck1">Deixar vísivel</label>
-                        </div>
-                      </div>
-                      <div class="button">
-                        <input type="submit" value="Cadastrar Bebida" />
-                      </div>
-                    </form>
-                  </div>        
-                </div>
-        </div>
-    </section>
-    
-
-    <footer id="footer">
-        <div class="copyright">
-          &copy; Copyright <strong><span>CantiSystem</span></strong>. All Rights Reserved
-        </div>
-    </footer>
-    <script src="assets/js/registeredOwnerStudent.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-</body>
-
+		<footer id="footer">
+			<div class="copyright">
+				&copy; Copyright <strong><span>CantiSystem</span></strong
+				>. All Rights Reserved
+			</div>
+		</footer>
+		<script src="assets/js/registeredOwnerStudent.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

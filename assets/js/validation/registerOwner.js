@@ -1,24 +1,13 @@
 const form = document.querySelector("form");
-const [
-	studentName,
-	studentSurname,
-	id,
-	phone,
-	className,
-	shift,
-	login,
-	password,
-	email,
-] = document.querySelectorAll("form > div > div > input");
+const [ownerName, surname, cpf, phone, login, password, email] =
+	document.querySelectorAll("form > div > div > input");
 const message = document.querySelector(".invalidPassword");
-
 /**
  *
  * @param {SubmitEvent} e
  * @param {string} messageString
  */
 function displayError(e, messageString) {
-	console.log("aaa");
 	e.preventDefault();
 	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
@@ -33,13 +22,13 @@ function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;
 	if (
-		!/^[a-z ,.'-]+$/i.test(studentName.value) ||
-		!/^[a-z ,.'-]+$/i.test(studentSurname.value)
+		!/^[a-z ,.'-]+$/i.test(ownerName.value) ||
+		!/^[a-z ,.'-]+$/i.test(surname.value)
 	) {
 		displayError(e, "Nome deve conter apenas caracteres alfanuméricos.");
 	}
-	if (!/^\d+$/.test(id.value)) {
-		displayError(e, "Matrícula só deve conter números");
+	if (!/^\d{3}.?\d{3}.?\d{3}-?\d{2}$/.test(cpf.value)) {
+		displayError(e, "CPF incorreto");
 	}
 	if (
 		!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
@@ -47,15 +36,6 @@ function submit(e) {
 		)
 	) {
 		displayError(e, "Formato de telefone incorreto");
-	}
-	if (!/^[a-z 0-9-]+$/i.test(className.value)) {
-		displayError(
-			e,
-			"Nome da turma só deve conter letras, números, hífens e espaços"
-		);
-	}
-	if (!/^(matutino)|(vespertino)|(noturno)$/i.test(shift.value)) {
-		displayError(e, "Turno deve ser matutino, vespertino, ou noturno");
 	}
 	if (!/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/.test(login.value)) {
 		displayError(

@@ -1,0 +1,5 @@
+.invalidPassword {
+	color: red;
+	font-weight: bold;
+	background-color: white;
+}
