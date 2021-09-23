@@ -34,7 +34,6 @@ function redirecionar() {
 	var password = document.getElementById("password");
 	var form = document.getElementById("form");
 
-	console.log(email.value + password.value);
 	if(email.value == "admin@cantisystem.com" && password.value == "1234"){
 		form.action = 'registered.html';
 	}else if(email.value == "unifacs@unifacs.br" && password.value == "unifacs"){
