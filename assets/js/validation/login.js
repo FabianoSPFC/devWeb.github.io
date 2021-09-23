@@ -9,7 +9,7 @@ const message = document.querySelector(".invalidPassword");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + messageString;
+	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
 }
 
@@ -20,7 +20,7 @@ function displayError(e, messageString) {
 function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;
-	console.log(password.value.length)
+	console.log(password.value.length);
 	if (password.value.length === 0) {
 		displayError(e, "Preencha a Senha");
 	}
@@ -34,18 +34,27 @@ function redirecionar() {
 	var password = document.getElementById("password");
 	var form = document.getElementById("form");
 
-	if(email.value == "admin@cantisystem.com" && password.value == "1234"){
-		form.action = 'registered.html';
-	}else if(email.value == "unifacs@unifacs.br" && password.value == "unifacs"){
-		form.action = 'moduleSchool.html';
-	}else if(email.value == "lucas@unifacs.resp.br" && password.value == "lucas"){
-		form.action = 'moduleOwner.html';
-	}else if(email.value == "clayton@unifacs.edu.br" && password.value == "clayton"){
-		form.action = 'moduleStudent.html';
-	}else{
+	if (email.value == "admin@cantisystem.com" && password.value == "1234") {
+		form.action = "registered.html";
+	} else if (
+		email.value == "unifacs@unifacs.br" &&
+		password.value == "unifacs"
+	) {
+		form.action = "moduleSchool.html";
+	} else if (
+		email.value == "lucas@unifacs.resp.br" &&
+		password.value == "lucas"
+	) {
+		form.action = "moduleOwner.html";
+	} else if (
+		email.value == "clayton@unifacs.edu.br" &&
+		password.value == "clayton"
+	) {
+		form.action = "moduleStudent.html";
+	} else {
 		alert("Email ou Senha não conferem");
 	}
- }
+}
 
 form.onsubmit = submit;
 

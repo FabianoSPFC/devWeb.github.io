@@ -18,7 +18,7 @@ const message = document.querySelector(".invalidPassword2");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + messageString;
+	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
 }
 
@@ -27,21 +27,18 @@ function displayError(e, messageString) {
  * @param {SubmitEvent} e
  */
 
- function maskTel(tel){ 
+function maskTel(tel) {
 	var v = tel.value;
-	
-	if(isNaN(v[v.length-1])){ 
-	   tel.value = v.substring(0, v.length-1);
-	   return;
+
+	if (isNaN(v[v.length - 1])) {
+		tel.value = v.substring(0, v.length - 1);
+		return;
 	}
-	
+
 	tel.setAttribute("maxlength", "14");
-	if(tel.value.length == 2)
-		tel.value = "(" + tel.value + ') '; 
+	if (tel.value.length == 2) tel.value = "(" + tel.value + ") ";
 
-	if(tel.value.length == 9)
-		tel.value = tel.value + '-';
-
+	if (tel.value.length == 9) tel.value = tel.value + "-";
 }
 
 function submit(e) {
@@ -52,15 +49,16 @@ function submit(e) {
 		!/^[a-z ,.'-]+$/i.test(employeeName.value) ||
 		!/^[a-z ,.'-]+$/i.test(employeeSurname.value)
 	) {
+		console.log("nome com numero");
 		displayError(e, "Nome deve conter apenas caracteres alfanuméricos. ");
 	}
-	// if (
-	// 	!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
-	// 		schoolPhone.value
-	// 	)
-	// ) {
-	// 	displayError(e, "Formato de telefone incorreto. ");
-	// }
+	if (
+		!/^(?:(?:\+|00)?(55)\s?)? ?(?:(?:\(?[0-9][0-9]\)?)?\s?)? ?(?:((?:9\d|[0-9])\d{3})-?(\d{4}))$/.test(
+			schoolPhone.value
+		)
+	) {
+		displayError(e, "Formato de telefone incorreto. ");
+	}
 	if (!/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/.test(login.value)) {
 		displayError(
 			e,
@@ -84,7 +82,7 @@ function submit(e) {
 	) {
 		displayError(e, "Email Inválido. ");
 	}
-	if (!/^([\w\W,.ºª°]+)\s(\d+)$/.test(schoolAdress.value)) {
+	if (!/^([\w\W,.ºª°]+)(\s(\d+))?$/.test(schoolAdress.value)) {
 		displayError(
 			e,
 			"Endereço deve conter apenas caracteres alfanuméricos, espaço e símbolos (,.ºª°). "
@@ -93,3 +91,14 @@ function submit(e) {
 }
 
 form.onsubmit = submit;
+console.log({ form });
+console.log({
+	schoolName,
+	schoolPhone,
+	login,
+	password,
+	employeeName,
+	employeeSurname,
+	schoolEMail,
+	schoolAdress,
+});

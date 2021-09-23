@@ -18,9 +18,8 @@ const message = document.querySelector(".invalidPassword");
  * @param {string} messageString
  */
 function displayError(e, messageString) {
-	console.log("aaa");
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + messageString;
+	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
 }
 
@@ -29,35 +28,30 @@ function displayError(e, messageString) {
  * @param {SubmitEvent} e
  */
 
- function maskMatricula(tel){ 
+function maskMatricula(tel) {
 	var v = tel.value;
-	
-	if(isNaN(v[v.length-1])){ 
-	   tel.value = v.substring(0, v.length-1);
-	   return;
+
+	if (isNaN(v[v.length - 1])) {
+		tel.value = v.substring(0, v.length - 1);
+		return;
 	}
-	
-	tel.setAttribute("maxlength", "9");	
-	tel.value = Math.floor(Math.random() * 1000000000 + 1)
 
-
+	tel.setAttribute("maxlength", "9");
+	tel.value = Math.floor(Math.random() * 1000000000 + 1);
 }
 
- function maskTel(tel){ 
+function maskTel(tel) {
 	var v = tel.value;
-	
-	if(isNaN(v[v.length-1])){ 
-	   tel.value = v.substring(0, v.length-2);
-	   return;
+
+	if (isNaN(v[v.length - 1])) {
+		tel.value = v.substring(0, v.length - 2);
+		return;
 	}
-	
+
 	tel.setAttribute("maxlength", "15");
-	if(tel.value.length == 2)
-		tel.value = "(" + tel.value + ') '; 
+	if (tel.value.length == 2) tel.value = "(" + tel.value + ") ";
 
-	if(tel.value.length == 10)
-		tel.value = tel.value + '-';
-
+	if (tel.value.length == 10) tel.value = tel.value + "-";
 }
 
 function submit(e) {
@@ -72,13 +66,13 @@ function submit(e) {
 	if (!/^\d+$/.test(id.value)) {
 		displayError(e, "Matrícula só deve conter números. ");
 	}
-	// if (
-	// 	!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
-	// 		phone.value
-	// 	)
-	// ) {
-	// 	displayError(e, "Formato de telefone incorreto. ");
-	// }
+	if (
+		!/^(?:(?:\+|00)?(55)\s?)? ?(?:(?:\(?[1-9][0-9]\)?)?\s?)? ?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
+			phone.value
+		)
+	) {
+		displayError(e, "Formato de telefone incorreto. ");
+	}
 	if (!/^[a-z 0-9-]+$/i.test(className.value)) {
 		displayError(
 			e,

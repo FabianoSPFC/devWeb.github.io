@@ -18,7 +18,7 @@ const message = document.querySelector(".invalidPassword");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + messageString;
+	message.innerHTML = message.innerHTML + "<br/>" + messageString;
 	message.hidden = false;
 }
 
@@ -38,7 +38,7 @@ function submit(e) {
 		displayError(e, "Nome deve conter apenas caracteres alfanuméricos. ");
 	}
 	if (
-		!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
+		!/^(?:(?:\+|00)?(55)\s?)? ?(?:(?:\(?[1-9][0-9]\)?)?\s?)? ?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
 			schoolPhone.value
 		)
 	) {
@@ -67,7 +67,7 @@ function submit(e) {
 	) {
 		displayError(e, "Email Inválido. ");
 	}
-	if (!/^([\w\W,.ºª°]+)\s(\d+)$/.test(schoolAdress.value)) {
+	if (!/^([\w\W,.ºª°]+)\s(\d+)?$/.test(schoolAdress.value)) {
 		displayError(
 			e,
 			"Endereço deve conter apenas caracteres alfanuméricos, espaço e símbolos (,.ºª°). "
