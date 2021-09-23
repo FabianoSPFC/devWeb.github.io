@@ -146,6 +146,7 @@
 								<div class="input-box">
 									<input
 										type="text"
+										oninput="maskCPF(this)"
 										placeholder="CPF"
 										required
 									/>
@@ -153,7 +154,8 @@
 								<div class="input-box">
 									<input
 										type="text"
-										placeholder="Telefone"
+										oninput="maskTel(this)"
+										placeholder="Telefone"										
 										required
 									/>
 								</div>
@@ -185,8 +187,10 @@
 									value="Cadastrar Responsável"
 								/>
 							</div>
+							<div class="invalidRegistered">
+								<span hidden class="invalidPassword"></span>
+							</div>
 						</form>
-						<span hidden class="invalidPassword"></span>
 					</div>
 				</div>
 			</div>

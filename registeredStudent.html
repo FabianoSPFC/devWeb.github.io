@@ -82,7 +82,7 @@
 						<li>
 							<a
 								class="nav-link scrollto active"
-								href="registeredStudent.html"
+								href="#"
 								>Cadastrar Aluno</a
 							>
 						</li>
@@ -159,13 +159,16 @@
 								</div>
 								<div class="input-box">
 									<input
-										type="number"
+										type="text"
+										oninput="maskMatricula(this)"
 										placeholder="Matrícula"
 										required
 									/>
 								</div>
 								<div class="input-box">
-									<input type="text" placeholder="Telefone" />
+									<input type="text" 
+									oninput="maskTel(this)"
+									placeholder="Telefone" />
 								</div>
 								<div class="input-box">
 									<input
@@ -203,8 +206,9 @@
 								<input type="submit" value="Cadastrar Aluno" />
 							</div>
 						</form>
-						<span hidden class="invalidPassword"></span>
-					</div>
+						<div class="invalidRegistered">
+							<span hidden class="invalidPassword"></span>
+						</div>					</div>
 				</div>
 			</div>
 		</div>

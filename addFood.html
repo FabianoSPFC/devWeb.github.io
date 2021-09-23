@@ -147,7 +147,8 @@
 								</div>
 								<div class="input-box">
 									<input
-										type="number"
+										type="text"
+										oninput="maskPrice(this)"
 										placeholder="Preço"
 										required
 										min="0"
@@ -177,8 +178,9 @@
 								<input type="submit" value="Cadastrar Comida" />
 							</div>
 						</form>
-						<span hidden class="invalidPassword"></span>
-					</div>
+						<div class="invalidRegistered">
+							<span hidden class="invalidPassword"></span>
+						</div>					</div>
 				</div>
 			</div>
 		</section>
