@@ -1,5 +1,15 @@
 .invalidPassword {
+	text-align: justify;
 	color: red;
 	font-weight: bold;
-	background-color: white;
+	position: relative;
+	font-size: 15px;
+}
+
+.invalidRegistered{
+	width: 960px;
+	height: 80px;
+	position: relative;
+	top: 280px;
+	left: 310px;
 }
