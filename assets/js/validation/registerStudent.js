@@ -20,7 +20,7 @@ const message = document.querySelector(".invalidPassword");
 function displayError(e, messageString) {
 	console.log("aaa");
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + "<br/>" + messageString;
+	message.innerHTML = message.innerHTML + messageString;
 	message.hidden = false;
 }
 
