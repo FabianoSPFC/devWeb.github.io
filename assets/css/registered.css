@@ -217,3 +217,18 @@ form .user-details .input-box-complete{
   position: relative;
   margin-top: 18px;
 }
+
+.invalidPassword2 {
+	text-align: justify;
+	color: red;
+	font-weight: bold;
+	position: relative;
+	font-size: 12px;
+}
+
+.invalidRegistered2{
+	width: 640px;
+	height: 80px;
+  position: relative;
+  bottom: 20px;
+}
