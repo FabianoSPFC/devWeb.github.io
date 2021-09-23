@@ -42,7 +42,7 @@ function submit(e) {
 	) {
 		displayError(
 			e,
-			"Nome da comida permite apenas caracteres alfanuméricos"
+			"Nome da comida permite apenas caracteres alfanuméricos. "
 		);
 	}
 }

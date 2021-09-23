@@ -11,7 +11,7 @@ const message = document.querySelector(".invalidPassword");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML +  messageString;
+	message.innerHTML = message.innerHTML + messageString;
 	message.hidden = false;
 }
 
@@ -42,7 +42,7 @@ function submit(e) {
 	) {
 		displayError(
 			e,
-			"Nome da comida permite apenas caracteres alfanuméricos"
+			"Nome da comida permite apenas caracteres alfanuméricos. "
 		);
 	}
 }

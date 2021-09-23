@@ -67,31 +67,31 @@ function submit(e) {
 		!/^[a-z ,.'-]+$/i.test(studentName.value) ||
 		!/^[a-z ,.'-]+$/i.test(studentSurname.value)
 	) {
-		displayError(e, "Nome deve conter apenas caracteres alfanuméricos.");
+		displayError(e, "Nome deve conter apenas caracteres alfanuméricos. ");
 	}
 	if (!/^\d+$/.test(id.value)) {
-		displayError(e, "Matrícula só deve conter números");
+		displayError(e, "Matrícula só deve conter números. ");
 	}
 	if (
 		!/^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/.test(
 			phone.value
 		)
 	) {
-		displayError(e, "Formato de telefone incorreto");
+		displayError(e, "Formato de telefone incorreto. ");
 	}
 	if (!/^[a-z 0-9-]+$/i.test(className.value)) {
 		displayError(
 			e,
-			"Nome da turma só deve conter letras, números, hífens e espaços"
+			"Nome da turma só deve conter letras, números, hífens e espaços. "
 		);
 	}
 	if (!/^(matutino)|(vespertino)|(noturno)$/i.test(shift.value)) {
-		displayError(e, "Turno deve ser matutino, vespertino, ou noturno");
+		displayError(e, "Turno deve ser matutino, vespertino, ou noturno. ");
 	}
 	if (!/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/.test(login.value)) {
 		displayError(
 			e,
-			"Login deve conter apenas caracteres alfanuméricos e números."
+			"Login deve conter apenas caracteres alfanuméricos e números. "
 		);
 	}
 	if (
@@ -101,7 +101,7 @@ function submit(e) {
 	) {
 		displayError(
 			e,
-			"Senha deve conter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial (#?!@$ %^&*-)."
+			"Senha deve conter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial (#?!@$ %^&*-). "
 		);
 	}
 	if (
@@ -109,7 +109,7 @@ function submit(e) {
 			email.value
 		)
 	) {
-		displayError(e, "Email Inválido.");
+		displayError(e, "Email Inválido. ");
 	}
 }
 
