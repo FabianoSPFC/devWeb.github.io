@@ -9,7 +9,7 @@ const message = document.querySelector(".invalidPassword");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + "<br/>" + messageString;
+	message.innerHTML = message.innerHTML + messageString;
 	message.hidden = false;
 }
 
@@ -17,6 +17,38 @@ function displayError(e, messageString) {
  *
  * @param {SubmitEvent} e
  */
+
+ function maskTel(tel){ 
+	var v = tel.value;
+	
+	if(isNaN(v[v.length-1])){ 
+	   tel.value = v.substring(0, v.length-2);
+	   return;
+	}
+	
+	tel.setAttribute("maxlength", "15");
+	if(tel.value.length == 2)
+		tel.value = "(" + tel.value + ') '; 
+
+	if(tel.value.length == 10)
+		tel.value = tel.value + '-';
+
+}
+
+ function maskCPF(i){
+   
+	var v = i.value;
+	
+	if(isNaN(v[v.length-1])){ 
+	   i.value = v.substring(0, v.length-1);
+	   return;
+	}
+	
+	i.setAttribute("maxlength", "14");
+	if (v.length == 3 || v.length == 7) i.value += ".";
+	if (v.length == 11) i.value += "-";
+ 
+ }
 
 function submit(e) {
 	message.innerHTML = "";

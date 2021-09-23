@@ -11,7 +11,7 @@ const message = document.querySelector(".invalidPassword");
  */
 function displayError(e, messageString) {
 	e.preventDefault();
-	message.innerHTML = message.innerHTML + "<br/>" + messageString;
+	message.innerHTML = message.innerHTML + messageString;
 	message.hidden = false;
 }
 
@@ -19,6 +19,20 @@ function displayError(e, messageString) {
  *
  * @param {SubmitEvent} e
  */
+
+ function maskPrice(i){
+   
+	var v = i.value;
+	
+	if(isNaN(v[v.length-1])){ 
+	   i.value = v.substring(0, v.length-1);
+	   return;
+	}
+	
+	i.setAttribute("maxlength", "7");
+	if (v.length == 2) i.value = "R$" + i.value + ".";	
+ }
+
 function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;

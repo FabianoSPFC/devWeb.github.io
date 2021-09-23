@@ -15,9 +15,7 @@ function createProduct([img, category, tittle, description, price, choose]){
         <p class="">
         ${description}
         </p>
-        <p class="">
-        Preço: R$${price}
-        </p>
+        <span class="card-price"> ${price} </span></p>
         <input id="toggle" class="toggle" type="checkbox">Habilitar Produto: 
         <label for="toggle"></label>
     </div>
@@ -35,8 +33,8 @@ product.innerHTML += code;
 let = a = ["https://assets.dmagstatic.com/wp-content/uploads/media/3151226/LaComida_guacamole.jpg?cropUpAlias=wide_8-12&width=677",
            "Comida",
            "Salada",
-           "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-           "10,00",
+           "Salada de alface, tomate cereja",
+           "10.00",
           ]
 
 

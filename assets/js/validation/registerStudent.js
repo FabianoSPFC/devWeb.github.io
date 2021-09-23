@@ -29,6 +29,37 @@ function displayError(e, messageString) {
  * @param {SubmitEvent} e
  */
 
+ function maskMatricula(tel){ 
+	var v = tel.value;
+	
+	if(isNaN(v[v.length-1])){ 
+	   tel.value = v.substring(0, v.length-1);
+	   return;
+	}
+	
+	tel.setAttribute("maxlength", "9");	
+	tel.value = Math.floor(Math.random() * 1000000000 + 1)
+
+
+}
+
+ function maskTel(tel){ 
+	var v = tel.value;
+	
+	if(isNaN(v[v.length-1])){ 
+	   tel.value = v.substring(0, v.length-2);
+	   return;
+	}
+	
+	tel.setAttribute("maxlength", "15");
+	if(tel.value.length == 2)
+		tel.value = "(" + tel.value + ') '; 
+
+	if(tel.value.length == 10)
+		tel.value = tel.value + '-';
+
+}
+
 function submit(e) {
 	message.innerHTML = "";
 	message.hidden = true;
