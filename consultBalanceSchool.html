@@ -14,6 +14,13 @@
 			rel="stylesheet"
 		/>
 
+		<link
+		rel="stylesheet"
+		href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+		crossorigin="anonymous"
+	  />
+
 		<!-- Vendor CSS Files -->
 		<link
 			href="assets/vendor/bootstrap/css/bootstrap.min.css"
@@ -118,85 +125,343 @@
 								<thead>
 									<tr>
 										<th>Matrícula</th>
-										<th>Nome</th>
-										<th>Saldo</th>
+										<th>Nome do Aluno</th>
+										<th>Nome do Responsável</th>
+										<th>Saldo do Aluno</th>
+										<th>Ação</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>123456789</td>
 										<td>Mario Souza</td>
+										<td>Mario Souza</td>
 										<td>R$68.50</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
+									</td>
 									</tr>
 									<tr>
 										<td>144152014</td>
 										<td>Wellington Santos</td>
+										<td>Wellington Santos</td>
 										<td>R$41.80</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>144171025</td>
 										<td>Larissa da Silva</td>
+										<td>Larissa da Silva</td>
 										<td>R$71.90</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>141171058</td>
 										<td>Pricila Peixoto</td>
+										<td>Pricila Peixoto</td>
 										<td>R$18.70</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>020161055</td>
 										<td>Felipe Souto</td>
+										<td>Felipe Souto</td>
 										<td>R$8.80</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>147171050</td>
 										<td>Paulo César</td>
+										<td>Paulo César</td>
 										<td>R$41.80</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>144171000</td>
 										<td>Maria Antônia</td>
+										<td>Maria Antônia</td>
 										<td>R$30.00</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>141171150</td>
 										<td>Robson de Alencar</td>
+										<td>Robson de Alencar</td>
 										<td>R$58.65</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>141180254</td>
 										<td>Clara Souza</td>
+										<td>Clara Souza</td>
 										<td>R$5.80</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>147171250</td>
 										<td>Pedro Paulo</td>
+										<td>Pedro Paulo</td>
 										<td>R$32.30</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>147573050</td>
 										<td>Vinicius Silva</td>
+										<td>Vinicius Silva</td>
 										<td>R$40.50</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>020161025</td>
 										<td>Natalia Ramos</td>
+										<td>Natalia Ramos</td>
 										<td>R$11.20</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>050010325</td>
 										<td>Roberto Santos</td>
+										<td>Roberto Santos</td>
 										<td>R$10.98</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>020168027</td>
 										<td>Caio Campos</td>
+										<td>Caio Campos</td>
 										<td>R$36.70</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 									<tr>
 										<td>141125048</td>
 										<td>Clayton Almeida</td>
+										<td>Clayton Almeida</td>
 										<td>R$23.25</td>
+										<td>
+											<a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveStudent"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Editar Aluno" class="fas fa-user-graduate"></i></a>
+										  <a
+											href="#"
+											data-toggle="modal"
+											data-target="#modalRemoveOwner"
+											><i  data-toggle="tooltip"
+											data-placement="top"
+											title="Excluir Aluno" class="fas fa-trash-alt"></i>
+										</a>
 									</tr>
 								</tbody>
 							</table>
@@ -205,6 +470,91 @@
 				</div>
 			</div>
 		</div>
+
+
+		    <!--Modal Edit Student-->
+			<div
+			  class="modal fade"
+			  id="modalRemoveStudent"
+			  tabindex="-1"
+			  aria-labelledby="modalRemoveStudent"
+			  aria-hidden="true"
+			>
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"><h3>Remover Aluno</h3>
+					<button
+					  type="button"
+					  class="close"
+					  data-dismiss="modal"
+					  aria-label="Close"
+					>
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<div class="content">              
+						<p class="text-center">Deseja Remover Mario Souza da sua lista de alunos?</p>
+					</div>
+				  </div>
+				  <div class="modal-footer">
+					<button
+					  type="button"
+					  class="btn btn-success"
+					  data-dismiss="modal"
+					>
+					  SIM
+					</button>
+					<button type="button" class="btn btn-danger">
+					  NÃO
+					</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		
+			<!-- Modal Remove Students-->
+			<div
+			  class="modal fade"
+			  id="modalRemoveOwner"
+			  tabindex="-1"
+			  aria-labelledby="modalRemoveOwner"
+			  aria-hidden="true"
+			>
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"><h3>Remover Responsável</h3>
+					<button
+					  type="button"
+					  class="close"
+					  data-dismiss="modal"
+					  aria-label="Close"
+					>
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<div class="content">              
+						<p class="text-center">Deseja Remover Mario Souza da sua lista de responsáveis?</p>
+					</div>
+				  </div>
+				  <div class="modal-footer">
+					<button
+					  type="button"
+					  class="btn btn-success"
+					  data-dismiss="modal"
+					>
+					  SIM
+					</button>
+					<button type="button" class="btn btn-danger">
+					  NÃO
+					</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
 
 		<footer id="footer">
 			<div class="copyright">
