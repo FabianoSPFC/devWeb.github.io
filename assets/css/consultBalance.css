@@ -240,6 +240,18 @@
       position: relative;
       left: 0px;
     }
+
+    .fa-user-edit{
+      color: orange;
+      position: relative;
+      left: 0px;
+    }
+  
+    .fa-trash-alt{
+      color: red;
+      position: relative;
+      left: 15px;
+    }
   
     .fa-money-check-alt{
       color: grey;

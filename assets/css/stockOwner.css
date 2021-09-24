@@ -252,8 +252,194 @@ h1.heading {
     position: relative;
     left: 30px;
   }
+  .fa-store{
+    color: tomato;
+    position: relative;
+    left: 45px;
+  }
+
+  .fa-user-edit{
+    color: orange;
+    position: relative;
+    left: 60px;
+  }
+
+  .fa-trash-alt{
+    color: red;
+    position: relative;
+    left: 75px;
+  }
 
   #listMonth{
     position: relative;
     margin-bottom: 20px;
+  }
+
+  .content form .user-details{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-box span.details{
+    font-weight: 500;
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  form .user-details .input-box-complete{
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  
+  .user-details .input-box-complete input{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+   form .button{
+     height: 45px;
+     margin: 35px 0
+   }
+   form .button input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #000;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background-color: #e09537 }
+   form .button input:hover{
+    border: 1px solid #277476;
+    background-color: #319396 ;
+    color: #fff;
+  }
+  
+  
+  .container .wrapper{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .wrapper.active{
+    border: none;
+  }
+  .wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  
+  }
+  .wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .wrapper .icon{
+    font-size: 100px;
+    color: #e09537;
+  }
+  .wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #277476;
+  }
+  .wrapper #cancel-btn i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #e09537;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper.active:hover #cancel-btn i{
+    display: block;
+  }
+  .wrapper #cancel-btn i:hover{
+    color: red;
+  }
+  .container #btn-Choose-Image{
+    margin-top: 15px;
+    display: block;
+    width: 50%;
+    height: 50px;
+    left: 150px;
+    position: relative;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #319396 ;
+  }
+  
+  .back{
+    color: black;
+    position: relative;
+    right: 160px;
+    bottom: 400px;
+  }
+  .back:link {
+    background-color: #e09537;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  .back:hover{
+    background-color: #c98634;
+    color: white;
+  }
+  
+  .logo {
+    height: 150px;
+    position: relative;
+    left: 150px;
+    bottom: 350px;
+  }
+  
+  .img-aling{
+    position: relative;
+    margin-top: 18px;
   }
