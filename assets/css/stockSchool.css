@@ -324,40 +324,14 @@ h1.heading {
   font-size: 1.1em;
 }
 
+.fa-minus-circle{
+ position: relative;
+ bottom: 185px;
+ left: 130px;
+font-size: 25px;
+color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fa-minus-circle:hover{
+ color: red;
+}
